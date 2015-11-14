@@ -173,6 +173,12 @@ class Attachment:
         # Get short filename
         self.shortFilename = msg._getStringStream([dir_, '__substg1.0_3704'])
 
+        # Get extension
+        self.extension = msg._getStringStream([dir_, '__substg1.0_3703'])
+
+        # Get mime tag
+        self.mimeTag = msg._getStringStream([dir_, '__substg1.0_370E'])
+
         # Get attachment data
         self.data = msg._getStream([dir_, '__substg1.0_37010102'])
 
